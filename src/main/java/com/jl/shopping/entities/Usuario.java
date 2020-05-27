@@ -11,6 +11,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name="usuario")
 public class Usuario {
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int idCliente;
     private String nombre;
     private String direccion;
@@ -21,8 +23,7 @@ public class Usuario {
         return idCliente;
     }
 
-    @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+
     public void setIdCliente(int idCliente) {
         this.idCliente = idCliente;
     }

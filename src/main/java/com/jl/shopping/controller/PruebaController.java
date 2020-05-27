@@ -17,7 +17,7 @@ public class PruebaController {
 
     @GetMapping("/usuarios")
     public List<Usuario> getUsuarios () {
-        List<Usuario> usuarios = usuarioRepository.all();
+        List<Usuario> usuarios = usuarioRepository.findAll();
 
         return usuarios;
     }
