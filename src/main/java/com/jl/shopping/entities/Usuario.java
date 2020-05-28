@@ -1,7 +1,7 @@
 package com.jl.shopping.entities;
 
 import org.apache.naming.factory.SendMailFactory;
-import org.springframework.data.annotation.Id;
+import javax.persistence.Id;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
