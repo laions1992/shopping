@@ -1,6 +1,13 @@
 package com.jl.shopping.entities;
 
 import javax.persistence.*;
+import org.apache.naming.factory.SendMailFactory;
+import javax.persistence.Id;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Table;
+
 
 @Entity
 @Table(name="facturacion")
@@ -11,7 +18,7 @@ public class Facturacion {
     private int idFacturacion;
     private int idProducto;
     private int idCompra;
-    private float cantidad;
+    private int cantidad;
     private float precioCompra;
 
     public int getIdFacturacion() {
@@ -42,7 +49,7 @@ public class Facturacion {
         return cantidad;
     }
 
-    public void setCantidad(float cantidad) {
+    public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
 

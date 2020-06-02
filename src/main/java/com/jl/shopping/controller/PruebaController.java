@@ -1,6 +1,8 @@
 package com.jl.shopping.controller;
 
+import com.jl.shopping.entities.Facturacion;
 import com.jl.shopping.entities.Usuario;
+import com.jl.shopping.repositories.FacturacionRepository;
 import com.jl.shopping.repositories.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -31,10 +33,21 @@ public class PruebaController {
     }
 
 
-    @GetMapping("/otro/{nombre}")
-    public String prueba2 (@PathVariable("nombre") String nombre) {
-        return "Bienvenido a Spring " + nombre;
+
+    @Autowired
+    private FacturacionRepository facturacionRepository;
+
+
+    @GetMapping("/facturacion")
+    public List<Facturacion> getFacturacion () {
+        List<Facturacion> facturas = facturacionRepository.findAll();
+
+        return facturas;
     }
+
+
+
+
 
 
 

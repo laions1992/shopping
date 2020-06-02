@@ -11,7 +11,7 @@ public class Compra {
     private int idCompra;
     private int idCliente;
     private int idPago;
-    private char fechaCompra [45];
+    private String fechaCompra;
     private float monto;
 
     public int getIdCompra() {
@@ -38,11 +38,11 @@ public class Compra {
         this.idPago = idPago;
     }
 
-    public char[] getFechaCompra() {
+    public String getFechaCompra() {
         return fechaCompra;
     }
 
-    public void setFechaCompra(char[] fechaCompra) {
+    public void setFechaCompra(String fechaCompra) {
         this.fechaCompra = fechaCompra;
     }
 
