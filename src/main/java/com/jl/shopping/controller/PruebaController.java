@@ -1,8 +1,10 @@
 package com.jl.shopping.controller;
 
 import com.jl.shopping.entities.Facturacion;
+import com.jl.shopping.entities.Pago;
 import com.jl.shopping.entities.Usuario;
 import com.jl.shopping.repositories.FacturacionRepository;
+import com.jl.shopping.repositories.PagoRepository;
 import com.jl.shopping.repositories.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,12 +17,13 @@ import java.util.List;
 public class PruebaController {
     @Autowired
     private UsuarioRepository usuarioRepository;
+    private FacturacionRepository facturacionRepository;
+    private PagoRepository pagoRepository;
 
 
     @GetMapping("/usuarios")
     public List<Usuario> getUsuarios () {
         List<Usuario> usuarios = usuarioRepository.findAll();
-
         return usuarios;
     }
 
@@ -33,22 +36,16 @@ public class PruebaController {
     }
 
 
-
-    @Autowired
-    private FacturacionRepository facturacionRepository;
-
-
-    @GetMapping("/facturacion")
+    @GetMapping("/facturas")
     public List<Facturacion> getFacturacion () {
         List<Facturacion> facturas = facturacionRepository.findAll();
-
         return facturas;
     }
 
-
-
-
-
+    @GetMapping("/pagos")
+    public List<Pago> getPago () {
+        List<Pago> pagos = pagoRepository.findAll();
+        return pagos;}
 
 
 }
