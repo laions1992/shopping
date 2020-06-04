@@ -21,43 +21,43 @@ public class Facturacion {
     private int cantidad;
     private float precioCompra;
 
-    public int getIdFacturacion() {
+    public int getidFacturacion() {
         return idFacturacion;
     }
 
-    public void setIdFacturacion(int idFacturacion) {
+    public void setidFacturacion(int idFacturacion) {
         this.idFacturacion = idFacturacion;
     }
 
-    public int getIdProducto() {
+    public int getidProducto() {
         return idProducto;
     }
 
-    public void setIdProducto(int idProducto) {
+    public void setidProducto(int idProducto) {
         this.idProducto = idProducto;
     }
 
-    public int getIdCompra() {
+    public int getidCompra() {
         return idCompra;
     }
 
-    public void setIdCompra(int idCompra) {
+    public void setidCompra(int idCompra) {
         this.idCompra = idCompra;
     }
 
-    public float getCantidad() {
+    public float getcantidad() {
         return cantidad;
     }
 
-    public void setCantidad(int cantidad) {
+    public void setcantidad(int cantidad) {
         this.cantidad = cantidad;
     }
 
-    public float getPrecioCompra() {
+    public float getprecioCompra() {
         return precioCompra;
     }
 
-    public void setPrecioCompra(float precioCompra) {
+    public void setprecioCompra(float precioCompra) {
         this.precioCompra = precioCompra;
     }
 }

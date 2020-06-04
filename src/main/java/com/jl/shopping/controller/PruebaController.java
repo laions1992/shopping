@@ -17,9 +17,6 @@ import java.util.List;
 public class PruebaController {
     @Autowired
     private UsuarioRepository usuarioRepository;
-    private FacturacionRepository facturacionRepository;
-    private PagoRepository pagoRepository;
-
 
     @GetMapping("/usuarios")
     public List<Usuario> getUsuarios () {
@@ -36,12 +33,17 @@ public class PruebaController {
     }
 
 
+    @Autowired
+    private FacturacionRepository facturacionRepository;
     @GetMapping("/facturas")
     public List<Facturacion> getFacturacion () {
         List<Facturacion> facturas = facturacionRepository.findAll();
         return facturas;
     }
 
+
+    @Autowired
+    private PagoRepository pagoRepository;
     @GetMapping("/pagos")
     public List<Pago> getPago () {
         List<Pago> pagos = pagoRepository.findAll();

@@ -11,22 +11,22 @@ public class Pago {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
 
-    private int idPago;
+    private int idpago;
     private float monto;
 
-    public int getIdPago() {
-        return idPago;
+    public int getidPago() {
+        return idpago;
     }
 
-    public void setIdPago(int idPago) {
-        this.idPago = idPago;
+    public void setidpago(int idPago) {
+        this.idpago = idPago;
     }
 
-    public float getMonto() {
+    public float getmonto() {
         return monto;
     }
 
-    public void setMonto(float monto) {
+    public void setmonto(float monto) {
         this.monto = monto;
     }
 }
